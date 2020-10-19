@@ -1,6 +1,6 @@
 <?php
 
 	echo "hello php";
-	phpinfo();
+111222333333	phpinfo();
 
 ?>
