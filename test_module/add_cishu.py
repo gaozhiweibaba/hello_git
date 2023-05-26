@@ -1,4 +1,5 @@
 import requests
+import json
 
 
 data = {
@@ -10,9 +11,6 @@ data = {
 
 
 headers = {
-    'Postman-Token': '<calculated when request is sent>',
-    'Content-Length': '<calculated when request is sent>',
-    'Host': '<calculated when request is sent>',
     'User-Agent': 'PostmanRuntime/7.32.2',
     'Accept': '*/*',
     'Accept-Encoding': 'gzip, deflate, br',
@@ -23,7 +21,9 @@ headers = {
 }
 
 url = 'https://test-marketing.tigerfintech.com/campaign/admin/api/v1/test/global_reward'
-reqs = requests.post(url, data, headers)
 
+for i in range(100):
+    reqs = requests.post(url, json.dumps(data), json.dumps(headers))
 
-print(reqs.text)
+print("done")
+
