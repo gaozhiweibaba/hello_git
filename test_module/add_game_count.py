@@ -26,7 +26,7 @@ def add_game_count(count):
 
 
 if __name__ == '__main__':
-    print(add_game_count(10))
+    print(add_game_count(1))
 
 
 
