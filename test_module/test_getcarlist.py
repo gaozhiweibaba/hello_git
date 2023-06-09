@@ -2,7 +2,7 @@ import requests
 
 
 data = {
-    "user_id": 8411888467957,
+    "user_id": 74118865397,
     "award_config_id": 2601,
     "campaign_name": "定投3.0抽奖机会",
     "campaign_number": "AC1685067613649rzXkWt"
