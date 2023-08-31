@@ -1,12 +1,38 @@
-import json
+# 资金量得分, AccountId =183998
+# （单个参赛用户账户累计净值/所有参赛用户账户累计净值总和）*30%+(（n+1-名次）/n)*70%
+n = 7
+net_liquidation_d = 100.02
+total_assets = 141797
+rank = 5
 
-with open(file="/Users/gaozhiwei/Desktop/a.txt", mode='r', encoding='utf-8') as f:
-    data = f.read()
+assets = (net_liquidation_d / total_assets) * 0.3 + ((n + 1 - rank) / n) * 0.7 * 100
+print("资金量得分", assets)
 
-data = json.loads(data)
-a = 0
-for i in data['data']:
-    print(a)
-    print(i['customerId'])
-    a+=1
-print("hello")
+
+# 最大本金收益率, AccountId =183998
+# 最大本金收益率得分=账户最大本金收益率/所有账户中最高的最大本金收益率*100
+
+index_1_maximum_principal_return_rate_d = 42.02
+top_return = 80.8
+return_score = index_1_maximum_principal_return_rate_d / top_return * 100
+print("最大本金收益率得分:", return_score)
+
+#  累计净利润得分
+# （账户累计净利润/所有账户最大累计净利润*100）*30%+（(n+1—名次)/n*100）*70%，
+max_cumulative_net_profit_d = 62.99
+top_profit = 3623.34
+profile_user_count = 7
+profile_rank = 4
+
+profit_score = (max_cumulative_net_profit_d / top_profit * 100) * 0.3 + \
+               ((profile_user_count+1-profile_rank)/profile_user_count* 100)*0.7
+print("累计净利润得分:", profit_score)
+
+# 最大回撤得分
+# - 最大回撤得分=【名次得分*100%】100 =【（n+1-名次）/n*100%】*100
+index_8_maximum_draw_down_rate_d_user_count = 7
+index_8_maximum_draw_down_rate_d_rank = 4
+drawdown_score = ((index_8_maximum_draw_down_rate_d_user_count + 1 - index_8_maximum_draw_down_rate_d_rank)
+            / index_8_maximum_draw_down_rate_d_user_count * 1) *100
+print("最大回撤得分", drawdown_score)
+
