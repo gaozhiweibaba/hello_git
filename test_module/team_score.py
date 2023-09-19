@@ -86,4 +86,3 @@ def team_score_day(account_id):
 
 if __name__ == '__main__':
     team_score_day(183998)
-
