@@ -1,4 +1,4 @@
-import joint_sql
+from hello_git.test_module.mysql_test import joint_sql
 
 
 def team_score_day(account_id):
