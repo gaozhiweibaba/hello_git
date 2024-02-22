@@ -88,4 +88,4 @@ def post_mail():
 
 
 if __name__ == '__main__':
-    post_mail()
+    get_list()
