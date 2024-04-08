@@ -14,4 +14,3 @@ for i in word_list:
         print("你输了，生命值-1", )
         game_count -= 1
         print("❤" * game_count)
-print("hello")
