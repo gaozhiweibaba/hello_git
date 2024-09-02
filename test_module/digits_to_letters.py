@@ -8,7 +8,7 @@ def letters_to_digits(letters: str):
     return ''.join(str(ord(letter) - ord('a')) for letter in letters)
 
 
-id = digits_to_letters(3812427104)
+id = digits_to_letters(2061697323)
 sta_date = "content"
 
 end_date = id + "_" + sta_date
@@ -16,6 +16,3 @@ end_date = id + "_" + sta_date
 print(end_date)
 
 print( letters_to_digits("dibcechbae"))
-
-
-
