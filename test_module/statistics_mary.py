@@ -55,7 +55,6 @@ def get_allocated_value(page_size: int, allocated_at: list, belong_crm_name: str
         'sec-fetch-site': 'same-site',
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36'
     }
-
     data = {
         'pageNumber': 1,
         'pageSize': page_size,
